@@ -19,7 +19,7 @@ test.describe('Test Suite', () => {
             await mainPage.clickOnMenuByIndex(2);
     
             const productCountBefore = await productListingPage.getListedProductCount();
-            await productListingPage.applyFilter(perfumFilterCriterias[0].filterValues);
+            await productListingPage.applyFilter(filterTest.filterValues);
 
             const productCountAfter = await productListingPage.getListedProductCount();
             expect(productCountBefore).not.toBe(productCountAfter);

@@ -29,11 +29,11 @@ export const perfumFilterCriterias = [
     {
         testName: 'Test4',
         filterValues: {
-            highlights: ['Limitiert'],
-            brand: ['100Bon'],
+            highlights: ['Sale'],
+            brand: ['4711', 'Aigner'],
             productType: ['Parfum', 'Duftset'],
-            presentFor: ['Geburtstag'],
-            gender: ['Unisex']
+            presentFor: ['Muttertag'],
+            gender: ['Weiblich']
         }
     },
 ];

@@ -25,7 +25,6 @@ export class ProductListingPage {
         } else {
             await this.page.locator(this.selectors.filterCheckbox).getByText(text).first().click();
         }
-        await this.page.locator(this.selectors.filterCloseButton).click();
     }
 
     async applyFilter(filter: FilterCriteria) {
@@ -36,6 +35,7 @@ export class ProductListingPage {
             for(const productType of filter.productType) {
                 await this.clickOnFilterCheckbox(productType);
             }
+            await this.page.locator(this.selectors.filterCloseButton).click();
         }
 
         if(filter.brand && (await this.page.locator(this.selectors.filterBrandName).isVisible())) {
@@ -43,6 +43,7 @@ export class ProductListingPage {
             for(const brandName of filter.brand) {
                 await this.clickOnFilterCheckbox(brandName);
             }
+            await this.page.locator(this.selectors.filterCloseButton).click();
         }
 
         if(filter.gender && (await this.page.locator(this.selectors.filterGender).isVisible())) {
@@ -50,6 +51,7 @@ export class ProductListingPage {
             for(const gender of filter.gender) {
                 await this.clickOnFilterCheckbox(gender);
             }
+            await this.page.locator(this.selectors.filterCloseButton).click();
         }
 
         if(filter.presentFor && (await this.page.locator(this.selectors.filterPresentFor).isVisible())) {
@@ -57,6 +59,7 @@ export class ProductListingPage {
             for(const presentFor of filter.presentFor) {
                 await this.clickOnFilterCheckbox(presentFor);
             }
+            await this.page.locator(this.selectors.filterCloseButton).click();
         }
 
         if(filter.highlights && (await this.page.locator(this.selectors.filterHighlights).isVisible())) {
@@ -64,6 +67,7 @@ export class ProductListingPage {
             for(const highlight of filter.highlights) {
                 await this.clickOnFilterCheckbox(highlight);
             }
+            await this.page.locator(this.selectors.filterCloseButton).click();
         }
     }
 
